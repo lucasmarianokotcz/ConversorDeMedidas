@@ -21,60 +21,56 @@ namespace ConversorDeMedidas
 
         private void LimparTextBoxs(object sender, EventArgs e)
         {
-            foreach (Control numeric in pnlMedidas.Controls)
-            {
-                numeric.ResetText();
-            }
-        }
-
-        private void Calcular()
-        {
-            calcular = new Calcular();
-            bool input = false;
-
             foreach (Control ctl in pnlMedidas.Controls)
             {
                 if (ctl is NumericUpDown)
                 {
                     NumericUpDown num = ctl as NumericUpDown;
-                    if (num.Value != 0)
+                    num.Value = 0;
+                }
+            }
+        }
+
+        private void Calcular(object sender, EventArgs e)
+        {
+            calcular = new Calcular();
+            bool input = false;
+
+            NumericUpDown[] nums = new NumericUpDown[] { numMedida1, numMedida2, numMedida3, numMedida4, numMedida5, numMedida6, numMedida7 };
+            string[] posicoes = new string[] { "K", "H", "DA", "", "D", "C", "M" };
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i].Value != 0)
+                {
+                    if (input == false)
                     {
-                        if (input == false)
-                        {
-                            input = true; 
-                        }
-                        else
-                        {
-                            MessageBox.Show("Você só pode ter um valor definido para realizar o cálculo!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            break;
-                        }
+                        input = true;
+                        calcular.Posição = posicoes[i];
+                        calcular.NumeroOrigem = nums[i].Value;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Você só pode ter um valor definido para realizar o cálculo!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        input = false;
+                        break;
                     }
                 }
             }
 
-            if (input == false)
+            if (input)
             {
-                MessageBox.Show("");
+                for (int i = 0; i < nums.Length; i++)
+                {
+                    nums[i].Value = calcular.Resultados[i];
+                }
             }
-
-
-            if (numMedida1.Value != 0)
+            else
             {
-                calcular.RecebePosição = "K";
+                calcular.Posição = "";
+                calcular.NumeroOrigem = 0;
+                MessageBox.Show("Você precisa definir pelo menos um valor!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (numMedida2.Value != 0)
-            {
-                calcular.RecebePosição = "H";
-            }
-            else if (numMedida3.Value != 0)
-            {
-                //calcular.rece
-            }
-        }
-
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-            LimparTextBoxs(null, null);
         }
     }
 }
