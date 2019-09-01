@@ -11,7 +11,7 @@ namespace ConversorDeMedidas
         public string Posição { get; set; }
         public decimal NumeroOrigem { get; set; } = 0;
 
-        decimal[] Resultados;// = new decimal[7];
+        public decimal[] Resultados;
         
         public void RealizaCalculo()
         {

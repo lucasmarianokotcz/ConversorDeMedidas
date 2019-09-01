@@ -31,7 +31,7 @@ namespace ConversorDeMedidas
             }
         }
 
-        private void Calcular()
+        private void Calcular(object sender, EventArgs e)
         {
             calcular = new Calcular();
             bool input = false;
@@ -58,7 +58,14 @@ namespace ConversorDeMedidas
                 }
             }
 
-            if (input == false)
+            if (input)
+            {
+                for (int i = 0; i < nums.Length; i++)
+                {
+                    nums[i].Value = calcular.Resultados[i];
+                }
+            }
+            else
             {
                 calcular.Posição = "";
                 calcular.NumeroOrigem = 0;
