@@ -27,6 +27,7 @@ namespace ConversorDeMedidas
         {
             foreach (Control numeric in pnlMedidas.Controls)
             {
+                numeric.Text = "0";
                 numeric.ResetText();
             }
         }
@@ -51,7 +52,6 @@ namespace ConversorDeMedidas
                     }
                     else
                     {
-                        MessageBox.Show("Você só pode ter um valor definido para realizar o cálculo!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         input = false;
                         break;
                     }
@@ -60,16 +60,25 @@ namespace ConversorDeMedidas
 
             if (input)
             {
+                calcular.RealizaCalculo();
+
                 for (int i = 0; i < nums.Length; i++)
                 {
-                    nums[i].Value = calcular.Resultados[i];
+                    try
+                    {
+                        nums[i].Value = calcular.Resultados[i];
+                    }
+                    catch (ArgumentOutOfRangeException)
+                    {
+                        nums[i].Value = 0;
+                    }
                 }
             }
             else
             {
                 calcular.Posição = "";
                 calcular.NumeroOrigem = 0;
-                MessageBox.Show("Você precisa definir pelo menos um valor!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Você precisa definir apenas um valor!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
