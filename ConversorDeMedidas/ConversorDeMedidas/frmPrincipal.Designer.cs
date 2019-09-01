@@ -70,7 +70,7 @@
             this.pnlMedidas.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlMedidas.Location = new System.Drawing.Point(172, 54);
             this.pnlMedidas.Name = "pnlMedidas";
-            this.pnlMedidas.Size = new System.Drawing.Size(183, 327);
+            this.pnlMedidas.Size = new System.Drawing.Size(345, 327);
             this.pnlMedidas.TabIndex = 7;
             // 
             // numMedida7
@@ -78,13 +78,14 @@
             this.numMedida7.DecimalPlaces = 3;
             this.numMedida7.Location = new System.Drawing.Point(30, 291);
             this.numMedida7.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
+            29360128,
+            -60931939,
+            42825,
             0});
             this.numMedida7.Name = "numMedida7";
-            this.numMedida7.Size = new System.Drawing.Size(120, 33);
+            this.numMedida7.Size = new System.Drawing.Size(284, 33);
             this.numMedida7.TabIndex = 6;
+            this.numMedida7.ThousandsSeparator = true;
             this.numMedida7.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // numMedida6
@@ -92,13 +93,14 @@
             this.numMedida6.DecimalPlaces = 3;
             this.numMedida6.Location = new System.Drawing.Point(30, 243);
             this.numMedida6.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
+            29360128,
+            -60931939,
+            42825,
             0});
             this.numMedida6.Name = "numMedida6";
-            this.numMedida6.Size = new System.Drawing.Size(120, 33);
+            this.numMedida6.Size = new System.Drawing.Size(284, 33);
             this.numMedida6.TabIndex = 5;
+            this.numMedida6.ThousandsSeparator = true;
             this.numMedida6.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // numMedida5
@@ -106,13 +108,14 @@
             this.numMedida5.DecimalPlaces = 3;
             this.numMedida5.Location = new System.Drawing.Point(30, 195);
             this.numMedida5.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
+            29360128,
+            -60931939,
+            42825,
             0});
             this.numMedida5.Name = "numMedida5";
-            this.numMedida5.Size = new System.Drawing.Size(120, 33);
+            this.numMedida5.Size = new System.Drawing.Size(284, 33);
             this.numMedida5.TabIndex = 4;
+            this.numMedida5.ThousandsSeparator = true;
             this.numMedida5.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // numMedida4
@@ -120,13 +123,14 @@
             this.numMedida4.DecimalPlaces = 3;
             this.numMedida4.Location = new System.Drawing.Point(30, 147);
             this.numMedida4.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
+            29360128,
+            -60931939,
+            42825,
             0});
             this.numMedida4.Name = "numMedida4";
-            this.numMedida4.Size = new System.Drawing.Size(120, 33);
+            this.numMedida4.Size = new System.Drawing.Size(284, 33);
             this.numMedida4.TabIndex = 3;
+            this.numMedida4.ThousandsSeparator = true;
             this.numMedida4.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // numMedida3
@@ -134,13 +138,14 @@
             this.numMedida3.DecimalPlaces = 3;
             this.numMedida3.Location = new System.Drawing.Point(30, 99);
             this.numMedida3.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
+            29360128,
+            -60931939,
+            42825,
             0});
             this.numMedida3.Name = "numMedida3";
-            this.numMedida3.Size = new System.Drawing.Size(120, 33);
+            this.numMedida3.Size = new System.Drawing.Size(284, 33);
             this.numMedida3.TabIndex = 2;
+            this.numMedida3.ThousandsSeparator = true;
             this.numMedida3.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // numMedida2
@@ -148,13 +153,14 @@
             this.numMedida2.DecimalPlaces = 3;
             this.numMedida2.Location = new System.Drawing.Point(30, 51);
             this.numMedida2.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
+            29360128,
+            -60931939,
+            42825,
             0});
             this.numMedida2.Name = "numMedida2";
-            this.numMedida2.Size = new System.Drawing.Size(120, 33);
+            this.numMedida2.Size = new System.Drawing.Size(284, 33);
             this.numMedida2.TabIndex = 1;
+            this.numMedida2.ThousandsSeparator = true;
             this.numMedida2.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // numMedida1
@@ -162,13 +168,14 @@
             this.numMedida1.DecimalPlaces = 3;
             this.numMedida1.Location = new System.Drawing.Point(30, 3);
             this.numMedida1.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
+            29360128,
+            -60931939,
+            42825,
             0});
             this.numMedida1.Name = "numMedida1";
-            this.numMedida1.Size = new System.Drawing.Size(120, 33);
+            this.numMedida1.Size = new System.Drawing.Size(284, 33);
             this.numMedida1.TabIndex = 0;
+            this.numMedida1.ThousandsSeparator = true;
             this.numMedida1.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // lblMedida1
@@ -255,7 +262,7 @@
             // 
             this.lblValorTitulo.AutoSize = true;
             this.lblValorTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorTitulo.Location = new System.Drawing.Point(229, 9);
+            this.lblValorTitulo.Location = new System.Drawing.Point(317, 9);
             this.lblValorTitulo.Name = "lblValorTitulo";
             this.lblValorTitulo.Size = new System.Drawing.Size(56, 25);
             this.lblValorTitulo.TabIndex = 16;
@@ -264,7 +271,7 @@
             // btnLimparCampos
             // 
             this.btnLimparCampos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimparCampos.Location = new System.Drawing.Point(12, 403);
+            this.btnLimparCampos.Location = new System.Drawing.Point(46, 403);
             this.btnLimparCampos.Name = "btnLimparCampos";
             this.btnLimparCampos.Size = new System.Drawing.Size(156, 35);
             this.btnLimparCampos.TabIndex = 18;
@@ -275,7 +282,7 @@
             // btnCalcular
             // 
             this.btnCalcular.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(183, 403);
+            this.btnCalcular.Location = new System.Drawing.Point(345, 403);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(172, 35);
             this.btnCalcular.TabIndex = 17;
@@ -287,7 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 461);
+            this.ClientSize = new System.Drawing.Size(555, 461);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.btnLimparCampos);
             this.Controls.Add(this.lblValorTitulo);
