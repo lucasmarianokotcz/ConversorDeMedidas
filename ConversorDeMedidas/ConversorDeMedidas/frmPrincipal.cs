@@ -19,7 +19,7 @@ namespace ConversorDeMedidas
 
         Calcular calcular;
 
-        private void LimparTextBoxs()
+        private void LimparTextBoxs(object sender, EventArgs e)
         {
             foreach (Control ctl in pnlMedidas.Controls)
             {
@@ -58,7 +58,7 @@ namespace ConversorDeMedidas
 
             if (input == false)
             {
-                MessageBox.Show("")
+                MessageBox.Show("");
             }
 
 
@@ -72,9 +72,8 @@ namespace ConversorDeMedidas
             }
             else if (numMedida3.Value != 0)
             {
-                calcular.rece
+                //calcular.rece
             }
         }
-
     }
 }

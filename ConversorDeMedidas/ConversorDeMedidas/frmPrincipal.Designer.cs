@@ -226,6 +226,7 @@
             this.btnLimparCampos.TabIndex = 17;
             this.btnLimparCampos.Text = "Limpar campos";
             this.btnLimparCampos.UseVisualStyleBackColor = true;
+            this.btnLimparCampos.Click += new System.EventHandler(this.LimparTextBoxs);
             // 
             // frmPrincipal
             // 
