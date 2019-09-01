@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.pnlMedidas = new System.Windows.Forms.Panel();
             this.numMedida7 = new System.Windows.Forms.NumericUpDown();
             this.numMedida6 = new System.Windows.Forms.NumericUpDown();
@@ -46,6 +47,7 @@
             this.lblMedidaTitulo = new System.Windows.Forms.Label();
             this.lblValorTitulo = new System.Windows.Forms.Label();
             this.btnLimparCampos = new System.Windows.Forms.Button();
+            this.btnCalcular = new System.Windows.Forms.Button();
             this.pnlMedidas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMedida7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMedida6)).BeginInit();
@@ -75,57 +77,99 @@
             // 
             this.numMedida7.DecimalPlaces = 3;
             this.numMedida7.Location = new System.Drawing.Point(30, 291);
+            this.numMedida7.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
             this.numMedida7.Name = "numMedida7";
             this.numMedida7.Size = new System.Drawing.Size(120, 33);
             this.numMedida7.TabIndex = 6;
+            this.numMedida7.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // numMedida6
             // 
             this.numMedida6.DecimalPlaces = 3;
             this.numMedida6.Location = new System.Drawing.Point(30, 243);
+            this.numMedida6.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
             this.numMedida6.Name = "numMedida6";
             this.numMedida6.Size = new System.Drawing.Size(120, 33);
             this.numMedida6.TabIndex = 5;
+            this.numMedida6.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // numMedida5
             // 
             this.numMedida5.DecimalPlaces = 3;
             this.numMedida5.Location = new System.Drawing.Point(30, 195);
+            this.numMedida5.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
             this.numMedida5.Name = "numMedida5";
             this.numMedida5.Size = new System.Drawing.Size(120, 33);
             this.numMedida5.TabIndex = 4;
+            this.numMedida5.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // numMedida4
             // 
             this.numMedida4.DecimalPlaces = 3;
             this.numMedida4.Location = new System.Drawing.Point(30, 147);
+            this.numMedida4.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
             this.numMedida4.Name = "numMedida4";
             this.numMedida4.Size = new System.Drawing.Size(120, 33);
             this.numMedida4.TabIndex = 3;
+            this.numMedida4.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // numMedida3
             // 
             this.numMedida3.DecimalPlaces = 3;
             this.numMedida3.Location = new System.Drawing.Point(30, 99);
+            this.numMedida3.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
             this.numMedida3.Name = "numMedida3";
             this.numMedida3.Size = new System.Drawing.Size(120, 33);
             this.numMedida3.TabIndex = 2;
+            this.numMedida3.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // numMedida2
             // 
             this.numMedida2.DecimalPlaces = 3;
             this.numMedida2.Location = new System.Drawing.Point(30, 51);
+            this.numMedida2.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
             this.numMedida2.Name = "numMedida2";
             this.numMedida2.Size = new System.Drawing.Size(120, 33);
             this.numMedida2.TabIndex = 1;
+            this.numMedida2.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // numMedida1
             // 
             this.numMedida1.DecimalPlaces = 3;
             this.numMedida1.Location = new System.Drawing.Point(30, 3);
+            this.numMedida1.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
             this.numMedida1.Name = "numMedida1";
             this.numMedida1.Size = new System.Drawing.Size(120, 33);
             this.numMedida1.TabIndex = 0;
+            this.numMedida1.Enter += new System.EventHandler(this.LimparTextBoxs);
             // 
             // lblMedida1
             // 
@@ -220,18 +264,30 @@
             // btnLimparCampos
             // 
             this.btnLimparCampos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimparCampos.Location = new System.Drawing.Point(87, 404);
+            this.btnLimparCampos.Location = new System.Drawing.Point(12, 403);
             this.btnLimparCampos.Name = "btnLimparCampos";
-            this.btnLimparCampos.Size = new System.Drawing.Size(198, 35);
-            this.btnLimparCampos.TabIndex = 17;
+            this.btnLimparCampos.Size = new System.Drawing.Size(156, 35);
+            this.btnLimparCampos.TabIndex = 18;
             this.btnLimparCampos.Text = "Limpar campos";
             this.btnLimparCampos.UseVisualStyleBackColor = true;
+            this.btnLimparCampos.Click += new System.EventHandler(this.LimparTextBoxs);
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.Location = new System.Drawing.Point(183, 403);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(172, 35);
+            this.btnCalcular.TabIndex = 17;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.btnLimparCampos);
             this.Controls.Add(this.lblValorTitulo);
             this.Controls.Add(this.lblMedidaTitulo);
@@ -244,10 +300,12 @@
             this.Controls.Add(this.lblMedida1);
             this.Controls.Add(this.pnlMedidas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Conversor de medidas - v1.0";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.pnlMedidas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numMedida7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMedida6)).EndInit();
@@ -280,6 +338,7 @@
         private System.Windows.Forms.NumericUpDown numMedida2;
         private System.Windows.Forms.NumericUpDown numMedida1;
         private System.Windows.Forms.Button btnLimparCampos;
+        private System.Windows.Forms.Button btnCalcular;
     }
 }
 

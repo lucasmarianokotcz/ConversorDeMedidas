@@ -19,15 +19,11 @@ namespace ConversorDeMedidas
 
         Calcular calcular;
 
-        private void LimparTextBoxs()
+        private void LimparTextBoxs(object sender, EventArgs e)
         {
-            foreach (Control ctl in pnlMedidas.Controls)
+            foreach (Control numeric in pnlMedidas.Controls)
             {
-                if (ctl is NumericUpDown)
-                {
-                    NumericUpDown num = ctl as NumericUpDown;
-                    num.Value = 0;
-                }
+                numeric.ResetText();
             }
         }
 
@@ -58,7 +54,7 @@ namespace ConversorDeMedidas
 
             if (input == false)
             {
-                MessageBox.Show("")
+                MessageBox.Show("");
             }
 
 
@@ -72,9 +68,13 @@ namespace ConversorDeMedidas
             }
             else if (numMedida3.Value != 0)
             {
-                calcular.rece
+                //calcular.rece
             }
         }
 
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            LimparTextBoxs(null, null);
+        }
     }
 }
