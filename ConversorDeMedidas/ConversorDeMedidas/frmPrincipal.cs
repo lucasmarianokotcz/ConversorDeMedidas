@@ -19,15 +19,15 @@ namespace ConversorDeMedidas
 
         Calcular calcular;
 
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            LimparTextBoxs(null, null);
+        }
         private void LimparTextBoxs(object sender, EventArgs e)
         {
-            foreach (Control ctl in pnlMedidas.Controls)
+            foreach (Control numeric in pnlMedidas.Controls)
             {
-                if (ctl is NumericUpDown)
-                {
-                    NumericUpDown num = ctl as NumericUpDown;
-                    num.Value = 0;
-                }
+                numeric.ResetText();
             }
         }
 
